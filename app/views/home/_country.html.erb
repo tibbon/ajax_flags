@@ -1,5 +1,14 @@
-    <div>
-      <p <%= 'class="na"'.html_safe if country.north_america %>>
-        <span class="flag <%= country.abbreviation %>"></span> <%= country.name %> <%= country.abbreviation %>
-      </p>
-    </div>
+<script id="country-template" type="text/x-handlebars-template">
+  <div>
+    <p>
+      <span class="flag {{abbreviation}}"></span> {{name}} ({{abbreviation}})
+    </p>
+  </div>
+</script>
+
+<script id="data-template" type="text/x-handlebars-template">
+  {{#each data}}
+    {{> country}}
+  {{/each}}
+</script>
+

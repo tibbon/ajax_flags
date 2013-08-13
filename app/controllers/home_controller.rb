@@ -5,7 +5,16 @@ class HomeController < ApplicationController
   end
 
   def countries
-    
+
   end
+
+  def data
+    @countries = Country.select([:id, :abbreviation, :name, :north_america]);
+
+    data = @countries
+    render :json => { data: data}
+  end
+
+
 
 end
