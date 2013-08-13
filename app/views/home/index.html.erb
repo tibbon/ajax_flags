@@ -10,8 +10,19 @@
 
 
     <div id="content" class="f32">
-
-      <%= render partial: 'country', collection: @countries %>
+    <script id="country-template" type="text/x-handlebars-template">
+      <div>
+        <p>
+          <span class="flag {{abbreviation}}"></span> {{name}} ({{abbreviation}})
+        </p>
+      </div>
+    </script>
+   <script id="data-template" type="text/x-handlebars-template">
+      {{#each countries}}
+        {{> country}}
+      {{/each}}
+    </script>
+         <%= render partial: 'country', collection: @countries %>
 
     </div>
 
