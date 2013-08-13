@@ -5,7 +5,11 @@ class HomeController < ApplicationController
   end
 
   def countries
-    step = params[:step].to_i
+    if params[:step] != 'all'
+      step = params[:step].to_i
+    else
+      step = Country.all.count - params[:offset].to_i
+    end
     offset = params[:offset].to_i
 
     countries = Country.select([:id, :abbreviation, :name, :north_america])
