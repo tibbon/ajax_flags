@@ -1,32 +1,24 @@
 
-var pointer = 0;
+var pointer = 0,
+    max;
 
 
 function populateCountries() {
-     console.log('click');
-   $.ajax({
-      url: '/',
-      dataType: 'json',
-      type: 'get'
-    }).done(function(data){
-        Handlebars.registerPartial("country", $('#country-template').html());
-        var source = $('#data-template').html();
-        var template = Handlebars.compile(source);
-        var templateHTML = template(data);
-        $('#content').append(templateHTML);
-    });
-  var countryCounter = 0;
-  var max = countryCounter + $('#step-input').val(),
-            source = $('#country-template').html(),
-            template = Handlebars.compile(source),
-            templateHTML;
+  var input = parseInt($('#step-input').val());
+  max = pointer + input;
+  var source = $('#country-template').html(),
+  template = Handlebars.compile(source);
 
-          for(countryCounter; countryCounter < max; countryCounter++ ) {
-            templateHTML = template(data.countries[countryCounter]);
-            $('#content').append(templateHTML);
-          }
-
-
+ $.ajax({
+    url: '/',
+    dataType: 'json',
+    type: 'get'
+  }).done(function(data){
+    for(pointer; pointer < max; pointer++) {
+      templateHTML = template(data.countries[pointer]);
+      $('#content').append(templateHTML);
+    }
+  });
 }
 
 function populateAll() {
