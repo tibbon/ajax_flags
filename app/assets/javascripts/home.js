@@ -35,6 +35,27 @@ function populateAll() {
   }).done(function(data){
     var templateHTML = template(data);
     $('#content').append(templateHTML);
+    countryInfo();
+  });
+
+}
+
+function countryInfo(){
+
+  $('.flag').click(function(){
+    var classInfo = this.className;
+    $.ajax({
+      url: '/',
+      dataType: 'json',
+      type: 'GET'
+    }).done(function(data){
+      debugger;
+      for(var i = 0; i < data.countries.length; i++) {
+        if(classInfo.slice(-2) === data.countries[i].abbreviation) {
+          alert("This country was entered in the database on " + data.countries[i].created_at + " and has an id number of " + data.countries[i].id );
+        }
+      }
+    });
   });
 
 }
@@ -46,7 +67,10 @@ $(document).ready(function() {
   // Demonstrates using a function name as the event handler instead of including the function inside (like we're used to seeing)
   // This is useful when re-binding events (certain events are unbound when clicking on the various buttons)
   $('#populate-button').click(populateCountriesClick);
-  $('#all-button').click(allButtonClick);
+  $('#all-button').click(function(){
+    allButtonClick();
+  });
+
   $('#reset-button').click(function() {
     // this function resets the button and scroll bindings, and sets pointer to 0
     pointer = 0;
@@ -54,6 +78,7 @@ $(document).ready(function() {
     $(window).unbind('scroll').scroll(scrollFunction);
     $('#populate-button').unbind('click').click(populateCountriesClick);
     $('#all-button').unbind('click').click(allButtonClick);
+
   });
 
   $(window).scroll(scrollFunction);
