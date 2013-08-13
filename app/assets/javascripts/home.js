@@ -53,15 +53,9 @@ $(document).ready(function() {
     $('#all-button').unbind('click').click(allButtonClick);
   });
 
-  $(window).scroll(scrollFunction);
 
-  function scrollFunction() {
-    var win = $(window);
-    // Infinite scroll math!
-    if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
-    }
-  }
+
+
 
   // Disables other buttons and scroll event so we don't get duplicate data
   // This serves as a demonstration; we could also just set pointer = false
@@ -72,4 +66,14 @@ $(document).ready(function() {
     populateAll();
   }
 
+});
+
+$(window).scroll(function() {
+  // Cache our jQuery selector for window
+  var win = $(window);
+
+  // Infinite scroll math!
+  if(win.height() + win.scrollTop() >= $(document).height()) {
+    populateCountries();
+  }
 });
