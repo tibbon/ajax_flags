@@ -5,19 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <script id="country-template" type="text/x-handlebars-template">
-    <div>
-      <p>
-        <span class="flag {{abbreviation}}"></span> {{country}} ({{abbreviation}})
-      </p>
-    </div>
-  </script>
 
-  <script id="data-template" type="text/x-handlebars-template">
-    {{#each countries}}
-    {{> country}}
-    {{/each}}
-  </script>
 </head>
 <body>
 
