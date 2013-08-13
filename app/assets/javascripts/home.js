@@ -5,7 +5,7 @@ var pointer = 0,
 
 function populateCountries(request_number) {
   number = request_number;
-  max = pointer + request_number;
+  max = pointer + number;
   Handlebars.registerPartial("country", $('#country-template').html());
   var source = $('#country-template').html(),
         template = Handlebars.compile(source);
@@ -14,12 +14,11 @@ function populateCountries(request_number) {
     dataType: 'json',
     type: 'GET'
   }).done(function(data){
-    for(pointer; pointer < max; pointer ++) {
+    for(pointer; pointer < max && data.countries.length; pointer ++) {
       var templateHTML = template(data.countries[pointer]);
       console.log(templateHTML);
       $('#content').append(templateHTML);
     }
-    max = pointer + number;
   });
 
 }

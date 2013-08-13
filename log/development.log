@@ -13291,3 +13291,199 @@ Served asset /home.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 17:00:46 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled home.js  (0ms)  (pid 41656)
+Compiled application.js  (2ms)  (pid 41656)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:36 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:01:37 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:01:38 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.7ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:01:38 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:01:38 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.7ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 17:01:39 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:11 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:12 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.8ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:12 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:12 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.7ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:12 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:12 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.7ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled home.js  (0ms)  (pid 41656)
+Compiled application.js  (1ms)  (pid 41656)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 17:02:14 -0400
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:16 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:17 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.7ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 17:02:17 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.7ms)
