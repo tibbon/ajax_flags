@@ -1,32 +1,52 @@
 var pointer = 0;
-var test;
+var allCountriesData;
 
 function populateCountries() {
   console.log("clicked populate countries");
+  // var max = pointer + 4;
 
+  // for(pointer; pointer < max; pointer++ ) {
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: '/countries/' + 1,
+  //     dataType: 'json'
+  //   }).done(function(data) {
+  //     var source = $('#country-template').html();
+  //     var template = Handlebars.compile(source);
+  //     var templateHTML = template(data.countries[pointer]);
+  //     $('#content').append(templateHTML);
+  //   }).fail(function(request, status, error) {
+  //     console.log(error);
+  //   });
+  // }
 }
 
 function populateAll() {
   console.log("clicked populate all");
+  Handlebars.registerPartial("country", $('#country-template').html());
+  var source = $('#data-template').html();
+  var template = Handlebars.compile(source);
+  var templateHTML = template(allCountriesData);
+  $('#content').append(templateHTML);
+}
+
+function addHandlebarScripts() {
+  $("head").append($("<script id='country-template' type='text/x-handlebars-template'><div><p><span class='flag {{abbreviation}}'></span> {{name}} {{abbreviation}}</p></div></script>"));
+  $("head").append($("<script id='data-template' type='text/x-handlebars-template'>{{#each countries}}{{> country}}{{/each}}</script>"));
+  getCountriesData();
+}
+
+function getCountriesData() {
   $.ajax({
     type: 'GET',
     url: '/',
     dataType: 'json'
   }).done(function(data) {
     console.log(data);
-    Handlebars.registerPartial("country", $('#country-template').html());
-    var source = $('#data-template').html();
-    var template = Handlebars.compile(source);
-    var templateHTML = template(data);
-    $('#content').append(templateHTML);
+    allCountriesData = data;
   }).fail(function(request, status, error) {
     console.log(error);
   });
-}
-
-function addHandlebarScripts() {
-  $("head").append($("<script id='country-template' type='text/x-handlebars-template'><div><p><span class='flag {{abbreviation}}'></span> {{name}} {{abbreviation}}</p></div></script>"));
-  $("head").append($("<script id='data-template' type='text/x-handlebars-template'>{{#each countries}}{{> country}}{{/each}}</script>"));
 }
 
 // Create the event bindings
