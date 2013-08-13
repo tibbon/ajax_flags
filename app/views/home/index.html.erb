@@ -1,8 +1,14 @@
 <script id="country-template" type="text/x-handlebars-template">
   <div>
-    <p>
-      <span class="flag {{abbreviation}}"></span> {{name}} ({{abbreviation}})
-    </p>
+    {{#if north_america}}
+      <p class="na">
+        <span class="flag {{abbreviation}}"></span> {{name}} ({{abbreviation}})
+      </p>
+    {{else}}
+      <p class>
+        <span class="flag {{abbreviation}}"></span> {{name}} ({{abbreviation}})
+      </p>
+    {{/if}}
   </div>
 </script>
 
