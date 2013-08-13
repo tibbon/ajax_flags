@@ -8,11 +8,20 @@ function populateCountries() {
     source = $('#country-template').html(),
     template = Handlebars.compile(source),
     templateHTML;
+  $.ajax({
+    url: '/',
+    dataType: 'json',
+    type: 'get'
+  }).done(function(data){
+      Handlebars.registerPartial("country", $('#country-template').html());
+      for(countryCounter; countryCounter < max; countryCounter++ ) {
+        templateHTML = template(data.countries[countryCounter]);
+        $('#content').append(templateHTML);
+      }
+    });
 
-  for(countryCounter; countryCounter < max; countryCounter++ ) {
-    templateHTML = template(data.countries[countryCounter]);
-    $('#content').append(templateHTML);
-  }
+
+
 }
 
 function populateAll() {
@@ -40,7 +49,7 @@ $(document).ready(function() {
   $('#populate-button').click(populateCountries);
   $('#all-button').click(allButtonClick);
   $('#reset-button').click(function() {
-    // this function resets the button and scroll bindings, and sets pointer to 0
+//    this function resets the button and scroll bindings, and sets pointer to 0
     pointer = 0;
     $('#content').html('');
     $(window).unbind('scroll').scroll(scrollFunction);
