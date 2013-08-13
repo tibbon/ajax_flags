@@ -1,17 +1,22 @@
-var pointer = 0;
-var max = 0
+var pointer = 0,
+max;
 
 function populateCountries() {
-    console.log('click');
-   $.ajax({
-      url: '/',
-      dataType: 'json',
-      type: 'get'
-    }).done(function(data){
-        for(pointer; pointer < max; pointer++)
-          templateHTML = template(data.countries[pointer]);
-          $('#content').append(templateHTML);
-    });
+  var input = parseInt($('#step-input').val());
+  max = pointer + input;
+  var source = $('#country-template').html(),
+  template = Handlebars.compile(source);
+
+ $.ajax({
+    url: '/',
+    dataType: 'json',
+    type: 'get'
+  }).done(function(data){
+    for(pointer; pointer < max; pointer++) {
+      templateHTML = template(data.countries[pointer]);
+      $('#content').append(templateHTML);
+    }
+  });
 }
 
 
