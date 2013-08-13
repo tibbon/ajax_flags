@@ -10,18 +10,14 @@
 
 
   <div id="content" class="f32">
-
+    <!-- iterate through each country returned with this one template  -->
     <script id="country-template" type="text/x-handlebars-template">
-      <div>
-        <p>
-          <span class="flag {{abbreviation}}"></span> {{country}} ({{abbreviation}})
-        </p>
-      </div>
-    </script>
-
-    <script id="data-template" type="text/x-handlebars-template">
       {{#each countries}}
-        {{> country}}
+        <div>
+          <p>
+            <span class='flag {{abbreviation}}'></span> {{name}} ({{abbreviation}})
+          </p>
+        </div>
       {{/each}}
     </script>
 

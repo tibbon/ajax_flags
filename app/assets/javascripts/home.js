@@ -3,7 +3,7 @@ $.ajax({
       url: '/',
       dataType: 'json'
     }).done(function(data){
-      var source = $("#data-template").html();
+      var source = $("#country-template").html();
       var template = Handlebars.compile(source);
       $('#content').append(template(data));
     }).fail(function(request, status, error) {
