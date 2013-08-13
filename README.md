@@ -3,6 +3,7 @@ The goal of this lab is to implement a basic Handlebars.js template.  What you h
 
 1. First, bundle install the app
 2. Migrate and seed the database
+
 1. Run the app and navigate to localhost:3000 to see what it looks like
 3. Investigate the current templates and become familiar what exists
 	* You should find an index.html.erb file that uses a partial to display the list of countries
