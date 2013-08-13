@@ -1,3 +1,14 @@
+$.ajax({
+      type: 'GET',
+      url: '/',
+      dataType: 'json'
+    }).done(function(data){
+      var source = $("#data-template").html();
+      var template = Handlebars.compile(source);
+      $('#content').append(template(data));
+    }).fail(function(request, status, error) {
+      console.log(error);
+    });
 var pointer = 0;
 
 
@@ -14,7 +25,10 @@ $(document).ready(function() {
   // Demonstrates using a function name as the event handler instead of including the function inside (like we're used to seeing)
   // This is useful when re-binding events (certain events are unbound when clicking on the various buttons)
   $('#populate-button').click(populateCountries);
-  $('#all-button').click(allButtonClick);
+  $('#all-button').click(function () {
+    $('#content').html(' ');
+    populateAll();
+  });
   $('#reset-button').click(function() {
     // this function resets the button and scroll bindings, and sets pointer to 0
     pointer = 0;
