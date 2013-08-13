@@ -4,15 +4,26 @@ var pointer = 0;
 function populateCountries() {
 }
 
-function populateAll() {
-}
-
+var populateAll = function() {
+  // alert("hello!");
+  $.ajax({
+    type: 'GET',
+    url: '/countries/:step/:offset',
+    dataType: 'json'
+  }).done(function(data){
+    var source = $('#data-template').html();
+    var template = Handlebars.compile(source);
+    var templateHTML = template(data);
+    $('#content').append(templateHTML);
+  });
+};
 
 
 // Create the event bindings
 $(document).ready(function() {
   // Demonstrates using a function name as the event handler instead of including the function inside (like we're used to seeing)
   // This is useful when re-binding events (certain events are unbound when clicking on the various buttons)
+
   $('#populate-button').click(populateCountries);
   $('#all-button').click(allButtonClick);
   $('#reset-button').click(function() {
