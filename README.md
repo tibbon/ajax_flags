@@ -9,9 +9,9 @@ The goal of this lab is to implement a basic Handlebars.js template.  What you h
 	* CHECK You should find a home.js file that includes the JS event bindings and the empty named functions.
 	* CHECK There should also be a number of support files (JS libraries, CSS files, and an image that serves as the flag sprite)
 1. CHECK Implement the erb partial as a Handlebars template
-2. Give the "Populate" and "All Data" buttons functionality
-2. Implement the concept of "infinite scrolling" to dynamically load the page as a user scrolls down
-3. As you scroll, the countries should populate until you reach the end.  Use your browsers inspector to investigate the network activity if you keep trying to scroll.  Refactor as necessary to mitigate any potential issues you identify.
+2. CHECK Give the "Populate" and "All Data" buttons functionality
+2. CHECK Implement the concept of "infinite scrolling" to dynamically load the page as a user scrolls down
+3. CHECK As you scroll, the countries should populate until you reach the end.  Use your browsers inspector to investigate the network activity if you keep trying to scroll.  Refactor as necessary to mitigate any potential issues you identify.
 
 
 ###Bonus Exercise 1 (Handlebars conditional)
