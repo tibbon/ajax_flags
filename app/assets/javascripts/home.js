@@ -4,7 +4,7 @@ var countryCounter = 0;
 
 
 function populateCountries() {
-  var max = countryCounter + $("#step-input")[0].value,
+  var max = countryCounter + parseFloat($("#step-input")[0].value),
     source = $('#country-template').html(),
     template = Handlebars.compile(source),
     templateHTML;
@@ -13,15 +13,11 @@ function populateCountries() {
     dataType: 'json',
     type: 'get'
   }).done(function(data){
-      Handlebars.registerPartial("country", $('#country-template').html());
       for(countryCounter; countryCounter < max; countryCounter++ ) {
         templateHTML = template(data.countries[countryCounter]);
         $('#content').append(templateHTML);
       }
     });
-
-
-
 }
 
 function populateAll() {
