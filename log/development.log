@@ -1860,3 +1860,603 @@ Started GET "/countries" for 127.0.0.1 at 2013-08-13 18:54:47 -0400
 Processing by HomeController#countries as JSON
   [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
 Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2013-08-13 18:56:53 -0400
+Processing by HomeController#countries as JSON
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 118ms (Views: 116.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery-1.10.2.min.map" for 127.0.0.1 at 2013-08-13 18:57:46 -0400
+Served asset /jquery-1.10.2.min.map - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.10.2.min.map"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Alice/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Alice/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Alice/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Alice/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Compiled home.js  (0ms)  (pid 28343)
+Compiled application.js  (3ms)  (pid 28343)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /home.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery-1.10.2.min.map" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Served asset /jquery-1.10.2.min.map - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.10.2.min.map"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Alice/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Alice/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Alice/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Alice/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/countries/10/0" for 127.0.0.1 at 2013-08-13 19:25:50 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"10", "offset"=>"0"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 66ms (Views: 1.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/flags32.png" for 127.0.0.1 at 2013-08-13 19:25:51 -0400
+Served asset /flags32.png - 304 Not Modified (0ms)
+
+
+Started GET "/countries/5/0" for 127.0.0.1 at 2013-08-13 19:25:53 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"0"}
+  [1m[35mCountry Load (1.2ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/5/5" for 127.0.0.1 at 2013-08-13 19:25:56 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"5"}
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/countries/5/10" for 127.0.0.1 at 2013-08-13 19:25:57 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"10"}
+  [1m[35mCountry Load (1.3ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 40ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/countries/5/15" for 127.0.0.1 at 2013-08-13 19:25:58 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"15"}
+  [1m[36mCountry Load (1.8ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 26ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/countries/5/20" for 127.0.0.1 at 2013-08-13 19:25:58 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"20"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/25" for 127.0.0.1 at 2013-08-13 19:25:58 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"25"}
+  [1m[36mCountry Load (1.3ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 43ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/countries/5/30" for 127.0.0.1 at 2013-08-13 19:25:58 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"30"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/35" for 127.0.0.1 at 2013-08-13 19:25:58 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"35"}
+  [1m[36mCountry Load (1.2ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/5/40" for 127.0.0.1 at 2013-08-13 19:25:58 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"40"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 41ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/45" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"45"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/50" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"50"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/55" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"55"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 43ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/60" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"60"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/65" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"65"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/70" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"70"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 42ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/75" for 127.0.0.1 at 2013-08-13 19:25:59 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"75"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/80" for 127.0.0.1 at 2013-08-13 19:26:00 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"80"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 17ms (Views: 2.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/85" for 127.0.0.1 at 2013-08-13 19:26:00 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"85"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 40ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/90" for 127.0.0.1 at 2013-08-13 19:26:00 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"90"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 19ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/95" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"95"}
+  [1m[36mCountry Load (1.2ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/5/100" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"100"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 41ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/105" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"105"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/110" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"110"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/115" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"115"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 45ms (Views: 32.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/120" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"120"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/125" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"125"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/130" for 127.0.0.1 at 2013-08-13 19:26:01 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"130"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/135" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"135"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/140" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"140"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/145" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"145"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/150" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"150"}
+  [1m[35mCountry Load (1.5ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 44ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/countries/5/155" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"155"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/160" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"160"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/165" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"165"}
+  [1m[36mCountry Load (1.2ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 44ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/5/170" for 127.0.0.1 at 2013-08-13 19:26:02 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"170"}
+  [1m[35mCountry Load (1.2ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/5/175" for 127.0.0.1 at 2013-08-13 19:26:03 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"175"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/180" for 127.0.0.1 at 2013-08-13 19:26:03 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"180"}
+  [1m[35mCountry Load (1.9ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 43ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/countries/5/185" for 127.0.0.1 at 2013-08-13 19:26:03 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"185"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/190" for 127.0.0.1 at 2013-08-13 19:26:03 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"190"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/195" for 127.0.0.1 at 2013-08-13 19:26:03 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"195"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 43ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/200" for 127.0.0.1 at 2013-08-13 19:26:03 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"200"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/10/0" for 127.0.0.1 at 2013-08-13 19:26:06 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"10", "offset"=>"0"}
+  [1m[36mCountry Load (1.6ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 53ms (Views: 2.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/countries/5/0" for 127.0.0.1 at 2013-08-13 19:26:09 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"0"}
+  [1m[35mCountry Load (1.9ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /flags32.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/10/0" for 127.0.0.1 at 2013-08-13 19:26:44 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"10", "offset"=>"0"}
+  [1m[36mCountry Load (1.3ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 62ms (Views: 2.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/countries/5/5" for 127.0.0.1 at 2013-08-13 19:26:46 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"5"}
+  [1m[35mCountry Load (1.3ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/countries/5/10" for 127.0.0.1 at 2013-08-13 19:26:49 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"10"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/15" for 127.0.0.1 at 2013-08-13 19:26:50 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"15"}
+  [1m[35mCountry Load (1.4ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 42ms (Views: 1.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/countries/5/20" for 127.0.0.1 at 2013-08-13 19:26:51 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"20"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/25" for 127.0.0.1 at 2013-08-13 19:26:52 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"25"}
+  [1m[35mCountry Load (1.1ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/30" for 127.0.0.1 at 2013-08-13 19:26:52 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"30"}
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 41ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/5/35" for 127.0.0.1 at 2013-08-13 19:26:55 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"35"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/40" for 127.0.0.1 at 2013-08-13 19:26:56 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"40"}
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/5/45" for 127.0.0.1 at 2013-08-13 19:26:56 -0400
+Processing by HomeController#countries as JSON
+  Parameters: {"step"=>"5", "offset"=>"45"}
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+Completed 200 OK in 42ms (Views: 0.8ms | ActiveRecord: 1.0ms)
