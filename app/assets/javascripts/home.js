@@ -1,16 +1,31 @@
 var pointer = 0;
-
+var test;
 
 function populateCountries() {
   console.log("clicked populate countries");
+
 }
 
 function populateAll() {
   console.log("clicked populate all");
+  $.ajax({
+    type: 'GET',
+    url: '/',
+    dataType: 'json'
+  }).done(function(data) {
+    console.log(data);
+    Handlebars.registerPartial("country", $('#country-template').html());
+    var source = $('#data-template').html();
+    var template = Handlebars.compile(source);
+    var templateHTML = template(data);
+    $('#content').append(templateHTML);
+  }).fail(function(request, status, error) {
+    console.log(error);
+  });
 }
 
 function addHandlebarScripts() {
-  $("head").append($("<script id='country-template' type='text/x-handlebars-template'><div><p><span class='flag {{abbreviation}}'></span> {{country}} ({{abbreviation}})</p></div></script>"));
+  $("head").append($("<script id='country-template' type='text/x-handlebars-template'><div><p><span class='flag {{abbreviation}}'></span> {{name}} {{abbreviation}}</p></div></script>"));
   $("head").append($("<script id='data-template' type='text/x-handlebars-template'>{{#each countries}}{{> country}}{{/each}}</script>"));
 }
 
