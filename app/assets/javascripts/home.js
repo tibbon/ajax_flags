@@ -52,7 +52,7 @@ $(document).ready(function() {
     pointer = 0;
     $('#content').html('');
     $(window).unbind('scroll').scroll(scrollFunction);
-    $('#populate-button').unbind('click').click(populateCountries);
+    $('#populate-button').unbind('click').click(populateCountriesClick);
     $('#all-button').unbind('click').click(allButtonClick);
   });
 
@@ -62,7 +62,9 @@ $(document).ready(function() {
     var win = $(window);
     // Infinite scroll math!
     if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
+      if (pointer < 272) {
+        populateCountries(parseInt($('#step-input').val()));
+      }
     }
   }
 
