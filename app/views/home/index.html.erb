@@ -22,10 +22,11 @@ $.ajax({
           url: '/countries',
           dataType: 'json'
       }).done(function(data) {
-          console.log(data);
           var source = $("#country-template").html();
           var template = Handlebars.compile(source);
-          $('#content').html(template(data));
+          _.each(data, function(country) {
+            $('#content').append(template(country));
+          });
       }).fail(function(request, status, error) {
           //Error handling
           console.log(error);
