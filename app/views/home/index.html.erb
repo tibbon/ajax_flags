@@ -21,7 +21,7 @@ $.ajax({
           url: '/countries/10/0',
           dataType: 'json'
       }).done(function(data) {
-          pointer += parseInt($('#step-input').val(), 10);
+          pointer = 10;
           var source = $("#country-template").html();
           var template = Handlebars.compile(source);
           _.each(data, function(country) {

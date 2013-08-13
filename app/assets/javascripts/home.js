@@ -7,7 +7,13 @@ function populateCountries() {
           url: '/countries/' + $('#step-input').val() + '/' + pointer,
           dataType: 'json'
       }).done(function(data) {
-          pointer += parseInt($('#step-input').val(), 10);
+          if (data) {
+            pointer += parseInt($('#step-input').val(), 10);
+          }
+          else {
+            pointer = false;
+          }
+
           var source = $("#country-template").html();
           var template = Handlebars.compile(source);
           _.each(data, function(country) {
