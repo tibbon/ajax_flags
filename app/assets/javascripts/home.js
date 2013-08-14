@@ -3,30 +3,23 @@ var allCountriesData;
 
 function populateCountries() {
   console.log("clicked populate countries");
-  // var max = pointer + 4;
+  var max = pointer + 4,
+      source = $('#country-template').html(),
+      template = Handlebars.compile(source),
+      templateHTML;
 
-  // for(pointer; pointer < max; pointer++ ) {
-  //   $.ajax({
-  //     type: 'GET',
-  //     url: '/countries/' + 1,
-  //     dataType: 'json'
-  //   }).done(function(data) {
-  //     var source = $('#country-template').html();
-  //     var template = Handlebars.compile(source);
-  //     var templateHTML = template(data.countries[pointer]);
-  //     $('#content').append(templateHTML);
-  //   }).fail(function(request, status, error) {
-  //     console.log(error);
-  //   });
-  // }
+  for(pointer; pointer < max; pointer++) {
+      templateHTML = template(allCountriesData.countries[pointer]);
+      $('#content').append(templateHTML);
+  }
 }
 
 function populateAll() {
   console.log("clicked populate all");
   Handlebars.registerPartial("country", $('#country-template').html());
-  var source = $('#data-template').html();
-  var template = Handlebars.compile(source);
-  var templateHTML = template(allCountriesData);
+  var source = $('#data-template').html(),
+      template = Handlebars.compile(source),
+      templateHTML = template(allCountriesData);
   $('#content').append(templateHTML);
 }
 
@@ -61,20 +54,20 @@ $(document).ready(function() {
     // this function resets the button and scroll bindings, and sets pointer to 0
     pointer = 0;
     $('#content').html('');
-    $(window).unbind('scroll').scroll(scrollFunction);
+    // $(window).unbind('scroll').scroll(scrollFunction);
     $('#populate-button').unbind('click').click(populateCountries);
     $('#all-button').unbind('click').click(allButtonClick);
   });
 
-  $(window).scroll(scrollFunction);
+  // $(window).scroll(scrollFunction);
 
-  function scrollFunction() {
-    var win = $(window);
-    // Infinite scroll math!
-    if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
-    }
-  }
+  // function scrollFunction() {
+  //   var win = $(window);
+  //   // Infinite scroll math!
+  //   if(win.height() + win.scrollTop() >= $(document).height()) {
+  //     populateCountries();
+  //   }
+  // }
 
   // Disables other buttons and scroll event so we don't get duplicate data
   // This serves as a demonstration; we could also just set pointer = false
