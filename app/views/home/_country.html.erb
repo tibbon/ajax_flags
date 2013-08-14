@@ -1,5 +1,7 @@
-    <div>
-      <p <%= 'class="na"'.html_safe if country.north_america %>>
-        <span class="flag <%= country.abbreviation %>"></span> <%= country.name %> <%= country.abbreviation %>
-      </p>
-    </div>
+<div>
+  <p <%= 'class="na"'.html_safe if country.north_america %>>
+    <span class="flag <%= country.abbreviation %>"></span> <%= country.name %> <%= country.abbreviation %>
+  </p>
+</div>
+
+<%= render partial: 'country', collection: @countries %>
