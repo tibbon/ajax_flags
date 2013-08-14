@@ -58,8 +58,8 @@ $(document).ready(function() {
   function scrollFunction() {
     var win = $(window);
     // Infinite scroll math!
-    if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
+    if(win.height() + win.scrollTop() >= $(document).height() && pointer < 272) {
+      populateCountries(5);
     }
   }
 
