@@ -5,7 +5,12 @@ class HomeController < ApplicationController
   end
 
   def countries
-    
+     @countries = Country.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: { countries: @countries}}
+    end
   end
 
 end

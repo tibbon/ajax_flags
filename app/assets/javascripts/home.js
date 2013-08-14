@@ -2,10 +2,22 @@ var pointer = 0;
 
 
 function populateCountries() {
-}
+        }
 
 function populateAll() {
-}
+  $.ajax({
+    type: 'GET',
+    url: '/',
+    dataType: 'json'
+  }).done(function(data){
+        var source = $('#data-template').html();
+        var template = Handlebars.compile(source);
+        var templateHTML = template(data);
+        $('#content').append(templateHTML);
+
+    });
+  }
+
 
 
 
