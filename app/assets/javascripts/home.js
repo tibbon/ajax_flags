@@ -3,14 +3,25 @@ var allCountriesData;
 
 function populateCountries() {
   console.log("clicked populate countries");
-  var max = pointer + 4,
+  var max,
       source = $('#country-template').html(),
       template = Handlebars.compile(source),
-      templateHTML;
+      templateHTML,
+      maxLength = allCountriesData.countries.length,
+      userInput;
+
+  userInput = parseInt($("#step-input").val());
+  if (userInput > 0) {
+    max = pointer + userInput;
+  } else {
+    max = 0;
+  }
 
   for(pointer; pointer < max; pointer++) {
+    if (pointer < maxLength) {
       templateHTML = template(allCountriesData.countries[pointer]);
       $('#content').append(templateHTML);
+    }
   }
 }
 
