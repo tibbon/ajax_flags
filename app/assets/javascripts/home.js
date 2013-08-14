@@ -35,7 +35,7 @@ function populateAll() {
 }
 
 function addHandlebarScripts() {
-  $("head").append($("<script id='country-template' type='text/x-handlebars-template'><div><p><span class='flag {{abbreviation}}'></span> {{name}} {{abbreviation}}</p></div></script>"));
+  $("head").append($("<script id='country-template' type='text/x-handlebars-template'><div>{{#if north_america}}<p class='na'><span class='flag {{abbreviation}}'></span> {{name}} {{abbreviation}}</p>{{else}}<p><span class='flag {{abbreviation}}'></span> {{name}} {{abbreviation}}</p>{{/if}}</div></script>"));
   $("head").append($("<script id='data-template' type='text/x-handlebars-template'>{{#each countries}}{{> country}}{{/each}}</script>"));
   getCountriesData();
 }
@@ -65,20 +65,20 @@ $(document).ready(function() {
     // this function resets the button and scroll bindings, and sets pointer to 0
     pointer = 0;
     $('#content').html('');
-    // $(window).unbind('scroll').scroll(scrollFunction);
+    $(window).unbind('scroll').scroll(scrollFunction);
     $('#populate-button').unbind('click').click(populateCountries);
     $('#all-button').unbind('click').click(allButtonClick);
   });
 
-  // $(window).scroll(scrollFunction);
+  $(window).scroll(scrollFunction);
 
-  // function scrollFunction() {
-  //   var win = $(window);
-  //   // Infinite scroll math!
-  //   if(win.height() + win.scrollTop() >= $(document).height()) {
-  //     populateCountries();
-  //   }
-  // }
+  function scrollFunction() {
+    var win = $(window);
+    // Infinite scroll math!
+    if(win.height() + win.scrollTop() >= $(document).height()) {
+      populateCountries();
+    }
+  }
 
   // Disables other buttons and scroll event so we don't get duplicate data
   // This serves as a demonstration; we could also just set pointer = false
