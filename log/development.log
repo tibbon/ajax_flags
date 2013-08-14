@@ -4462,3 +4462,187 @@ Processing by HomeController#index as JSON
   Rendered home/_country.html.erb (9.9ms)
   Rendered home/index.html.erb within layouts/application (19.0ms)
 Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Processing by HomeController#index as HTML
+  [1m[36mCountry Load (1.5ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+  Rendered home/_country.html.erb (13.6ms)
+  Rendered home/index.html.erb within layouts/application (27.5ms)
+Compiled home.js  (0ms)  (pid 11988)
+Compiled application.js  (2ms)  (pid 11988)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /flags32.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /handlebars.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /home.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery-1.10.2.min.map" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /jquery-1.10.2.min.map - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.10.2.min.map"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/ericgong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/ericgong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/ericgong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/ericgong/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/flags32.png" for 127.0.0.1 at 2013-08-13 22:50:45 -0400
+Served asset /flags32.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 22:50:48 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (0.8ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+  Rendered home/_country.html.erb (9.8ms)
+  Rendered home/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 23:07:35 -0400
+Processing by HomeController#index as JSON
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+  Rendered home/_country.html.erb (9.8ms)
+  Rendered home/index.html.erb within layouts/application (19.1ms)
+Compiled home.js  (0ms)  (pid 11988)
+Compiled application.js  (2ms)  (pid 11988)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 23:07:40 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+  Rendered home/_country.html.erb (10.3ms)
+  Rendered home/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 23:17:53 -0400
+Processing by HomeController#index as HTML
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT id, abbreviation, name, north_america FROM "countries" [0m
+  Rendered home/_country.html.erb (10.3ms)
+  Rendered home/index.html.erb within layouts/application (19.7ms)
+Compiled home.js  (0ms)  (pid 11988)
+Compiled application.js  (2ms)  (pid 11988)
+Completed 200 OK in 141ms (Views: 140.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 23:17:53 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /handlebars.js - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/flags32.css?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /flags32.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery-1.10.2.min.map" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /jquery-1.10.2.min.map - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.10.2.min.map"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/ericgong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/ericgong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/ericgong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/ericgong/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/flags32.png" for 127.0.0.1 at 2013-08-13 23:17:54 -0400
+Served asset /flags32.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 23:17:56 -0400
+Processing by HomeController#index as JSON
+  [1m[35mCountry Load (1.0ms)[0m  SELECT id, abbreviation, name, north_america FROM "countries" 
+  Rendered home/_country.html.erb (9.9ms)
+  Rendered home/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 1.0ms)

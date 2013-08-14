@@ -5,11 +5,13 @@ function populateCountries() {
         }
 
 function populateAll() {
+  console.log('populateAll shows something!');
   $.ajax({
     type: 'GET',
     url: '/',
     dataType: 'json'
   }).done(function(data){
+        Handlebars.registerPartial("country", $('#country-template').html());
         var source = $('#data-template').html();
         var template = Handlebars.compile(source);
         var templateHTML = template(data);
@@ -17,6 +19,8 @@ function populateAll() {
 
     });
   }
+
+
 
 
 
