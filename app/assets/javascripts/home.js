@@ -5,6 +5,18 @@ function populateCountries() {
 }
 
 function populateAll() {
+  var offset = 0;
+  var limit = 99;
+   $.ajax({
+   url: '/countries/' + limit + '/' + offset,
+   dataType: 'json'
+   type: 'GET'
+  }).done(function(data){
+   $("")
+  }).fail(function(request, statur, error) {
+    console.log(error);
+  });
+
 }
 
 
