@@ -31,11 +31,7 @@ function populateAll() {
     var templateHTML = template(data);
     $('#content').append(templateHTML);
   });
-
-
 }
-
-
 
 // Create the event bindings
 $(document).ready(function() {
@@ -58,7 +54,9 @@ $(document).ready(function() {
     var win = $(window);
     // Infinite scroll math!
     if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
+      if (pointer < 272) {
+        populateCountries(parseInt($('#step-input').val()));
+      }
     }
   }
 
