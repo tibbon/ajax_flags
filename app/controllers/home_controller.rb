@@ -4,10 +4,10 @@ class HomeController < ApplicationController
     @countries = Country.select([:id, :abbreviation, :name, :north_america]);
     # @countries = Country.all
 
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: {countries: @countries, only: [:id, :abbreviation, :name]}}
-    # end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: {countries: @countries}}
+    end
   end
 
   def countries

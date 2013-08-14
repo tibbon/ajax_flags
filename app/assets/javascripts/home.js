@@ -1,7 +1,25 @@
-var pointer = 0;
+var pointer = 0,
+  limit,
+  max = pointer + limit;
 
 
-function populateCountries() {
+function populateCountries(input_number) {
+  limit = input_number;
+  max = pointer + limit;
+  Handlebars.registerPartial("country", $('#country-template').html());
+      var source = $('#country-template').html(),
+       template = Handlebars.compile(source);
+  $.ajax({
+    type: 'GET',
+    url: '/',
+    dataType: 'json'
+    }).done(function(data){
+        for(pointer; pointer < max; pointer++ ) {
+          var templateHTML = template(data.countries[pointer]);
+          $('#content').append(templateHTML);
+    // debugger;
+          }
+      });
 }
 
 var populateAll = function() {
@@ -14,6 +32,7 @@ var populateAll = function() {
     var source = $('#data-template').html();
     var template = Handlebars.compile(source);
     var templateHTML = template(data);
+    // debugger;
     $('#content').append(templateHTML);
   });
 };
