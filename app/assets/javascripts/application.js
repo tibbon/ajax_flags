@@ -14,3 +14,10 @@
 //= require underscore
 //= require handlebars
 //= require home
+Handlebars.registerHelper('flagWrapperClass', function(booleanState) {
+  if (booleanState){
+    return 'class="na"';
+  }else {
+    return '';
+  }
+});
