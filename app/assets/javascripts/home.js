@@ -1,19 +1,48 @@
-var pointer = 0;
+
+var pointer = 0,
+    max;
 
 
-function populateCountries() {
+
+function populateCountries(input) {
+  Handlebars.registerPartial("country", $('#country-template').html());
+  num = input;
+  max = pointer + input;
+  var source = $('#country-template').html(),
+  template = Handlebars.compile(source);
+  $.ajax({
+    url: '/',
+    dataType: 'json',
+    type: 'get'
+  }).done(function(data) {
+    for(pointer; pointer < max; pointer++) {
+      templateHTML = template(data.countries[pointer]);
+      $('#content').append(templateHTML);
+    }
+  });
 }
 
 function populateAll() {
+  Handlebars.registerPartial("country", $('#country-template').html());
+  var source = $("#data-template").html();
+  var template = Handlebars.compile(source);
+  $.ajax({
+      type: 'GET',
+      url: '/',
+      dataType: 'json'
+    }).done(function(data){
+      var templateHTML = template(data);
+      $('#content').append(template(data));
+    }).fail(function(request, status, error) {
+      console.log(error);
+    });
 }
-
-
 
 // Create the event bindings
 $(document).ready(function() {
   // Demonstrates using a function name as the event handler instead of including the function inside (like we're used to seeing)
   // This is useful when re-binding events (certain events are unbound when clicking on the various buttons)
-  $('#populate-button').click(populateCountries);
+  $('#populate-button').click(populateCountriesClick);
   $('#all-button').click(allButtonClick);
   $('#reset-button').click(function() {
     // this function resets the button and scroll bindings, and sets pointer to 0
@@ -29,8 +58,8 @@ $(document).ready(function() {
   function scrollFunction() {
     var win = $(window);
     // Infinite scroll math!
-    if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
+    if(win.height() + win.scrollTop() >= $(document).height() && pointer < 272) {
+      populateCountries(5);
     }
   }
 
@@ -43,4 +72,10 @@ $(document).ready(function() {
     populateAll();
   }
 
+  function populateCountriesClick() {
+    $(window).unbind('scroll');
+    $('#all-button').unbind('click');
+    num = parseInt($('#step-input').val());
+    populateCountries(num);
+  }
 });
