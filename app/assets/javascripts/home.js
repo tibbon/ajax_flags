@@ -1,16 +1,31 @@
 var pointer = 0;
-
+var template = null;
 
 function populateCountries() {
+  var numberToFetch = $("#step-input").val();
+  $.ajax({
+    type: 'GET',
+    url: '/countries',
+    data: {start: pointer, limit: numberToFetch}
+  }).success(renderCountries);
+}
+
+function renderCountries(countries) {
+  pointer = countries.length + pointer;
+  var contentDiv = $('#content');
+  for(var i = 0; i< countries.length; i++){
+    var html = template(countries[i].data);
+    contentDiv.append(html);
+  }
 }
 
 function populateAll() {
 }
 
-
-
 // Create the event bindings
 $(document).ready(function() {
+  var source   = $("#country-template").html();
+  template = Handlebars.compile(source);
   // Demonstrates using a function name as the event handler instead of including the function inside (like we're used to seeing)
   // This is useful when re-binding events (certain events are unbound when clicking on the various buttons)
   $('#populate-button').click(populateCountries);
