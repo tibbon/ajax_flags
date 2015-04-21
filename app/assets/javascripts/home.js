@@ -1,12 +1,47 @@
-var pointer = 0;
-
+var pointer = 0,
+    ajax_switch = true;
 
 function populateCountries() {
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost:3000/',
+    dataType: 'json'
+  }).done(function(data) {
+    var increment = parseInt($('#step-input').val(), 10);
+    var source = $('#each-country-template').html();
+    var template = Handlebars.compile(source);
+    var max_limit = _.min([data.countries.length, pointer + increment]);
+    for (i = pointer; i < max_limit; i++) {
+      $('#content').append(template(data.countries[i]));
+    }
+    pointer += increment;
+    if (pointer >= max_limit) {
+      ajax_switch = false;
+    }
+    addClickEvent();
+    console.log(data);
+  });
+}
+
+function addClickEvent() {
+  $('#content').children().unbind('click').click(function() {
+      alert(this.dataset.id + " was created at " + this.dataset.created);
+  });
 }
 
 function populateAll() {
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost:3000/',
+    dataType: 'json'
+  }).done(function(data) {
+    $('#content').html('');
+    var source = $('#all-country-template').html();
+    var template = Handlebars.compile(source);
+    $('#content').append(template(data));
+    addClickEvent();
+  });
 }
-
 
 
 // Create the event bindings
@@ -18,6 +53,7 @@ $(document).ready(function() {
   $('#reset-button').click(function() {
     // this function resets the button and scroll bindings, and sets pointer to 0
     pointer = 0;
+    ajax_switch = true;
     $('#content').html('');
     $(window).unbind('scroll').scroll(scrollFunction);
     $('#populate-button').unbind('click').click(populateCountries);
@@ -30,7 +66,9 @@ $(document).ready(function() {
     var win = $(window);
     // Infinite scroll math!
     if(win.height() + win.scrollTop() >= $(document).height()) {
-      populateCountries();
+      if (ajax_switch === true) {
+        populateCountries();
+      }
     }
   }
 
