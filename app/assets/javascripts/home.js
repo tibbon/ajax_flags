@@ -1,10 +1,35 @@
-var pointer = 0;
-
+var pointer = 0,
+    max;
 
 function populateCountries() {
+  var numberOfTimes = parseInt($('#step-input').val()),
+      source = $('#country-template').html(),
+      template = Handlebars.compile(source);
+  max = pointer + numberOfTimes;
+  $.ajax({
+    type: 'get',
+    url: '/',
+    dataType: 'json'
+  }).done(function(data) {
+    for(pointer; pointer < max; pointer++) {
+      var templateHTML = template(data.countries[pointer]);
+      $('#content').append(templateHTML);
+    }
+  });
 }
 
 function populateAll() {
+  $.ajax({
+    type: 'get',
+    url: '/countries/:step/:offset',
+    dataType: 'json'
+  }).done(function(data) {
+    // Handlebars.registerPartial("country", $('#country-template').html());
+    var source = $('#countries-template').html();
+    var template = Handlebars.compile(source);
+    var templateHTML = template(data);
+    $('#content').append(templateHTML);
+  });
 }
 
 
@@ -29,7 +54,7 @@ $(document).ready(function() {
   function scrollFunction() {
     var win = $(window);
     // Infinite scroll math!
-    if(win.height() + win.scrollTop() >= $(document).height()) {
+    if(win.height() + win.scrollTop() >= $(document).height() && pointer < 272) {
       populateCountries();
     }
   }
