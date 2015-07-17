@@ -2,10 +2,47 @@ var pointer = 0;
 
 
 function populateCountries() {
+  if (pointer < 272) {
+    $.ajax({
+      type: 'GET',
+      url: '/data',
+      dataType: 'json'
+    }).done(function(data){
+      console.log(data);
+      Handlebars.registerPartial("country", $('#country-template').html());
+      var max = pointer + parseInt($('#step-input').val(), 10);
+      var source = $('#country-template').html();
+      var template = Handlebars.compile(source);
+      var templateHTML;
+      for(pointer; pointer < max; pointer++ ) {
+        // console.log(pointer);
+        // console.log(source);
+        // console.log(template)
+        templateHTML = template(data.data[pointer]);
+        console.log(templateHTML)
+        $('#content').append(templateHTML);
+      }
+    });
+  }
 }
 
+
+
 function populateAll() {
+  $.ajax({
+    type: 'GET',
+    url: '/data',
+    dataType: 'json'
+  }).done(function(data){
+    console.log(data);
+    Handlebars.registerPartial("country", $('#country-template').html());
+    var source = $('#data-template').html();
+    var template = Handlebars.compile(source);
+    var templateHTML = template(data);
+    $('#content').append(templateHTML);
+  });
 }
+
 
 
 
