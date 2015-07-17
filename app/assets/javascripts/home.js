@@ -1,10 +1,39 @@
-var pointer = 0;
+
+var pointer = 0,
+    max;
 
 
 function populateCountries() {
+  var input = parseInt($('#step-input').val());
+  max = pointer + input;
+  var source = $('#country-template').html(),
+  template = Handlebars.compile(source);
+
+ $.ajax({
+    url: '/',
+    dataType: 'json',
+    type: 'get'
+  }).done(function(data){
+    for(pointer; pointer < max; pointer++) {
+      templateHTML = template(data.countries[pointer]);
+      $('#content').append(templateHTML);
+    }
+  });
 }
 
 function populateAll() {
+    console.log('click');
+   $.ajax({
+      url: '/',
+      dataType: 'json',
+      type: 'get'
+    }).done(function(data){
+        Handlebars.registerPartial("country", $('#country-template').html());
+        var source = $('#data-template').html();
+        var template = Handlebars.compile(source);
+        var templateHTML = template(data);
+        $('#content').append(templateHTML);
+    });
 }
 
 

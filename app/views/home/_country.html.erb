@@ -3,3 +3,5 @@
         <span class="flag <%= country.abbreviation %>"></span> <%= country.name %> <%= country.abbreviation %>
       </p>
     </div>
+
+      <%= render partial: 'country', collection: @countries %>
